@@ -208,9 +208,12 @@ const hideBottomNav = computed(() => page.url.startsWith('/reports'));
                         <slot />
                     </div>
                 </transition>
+                <footer class="hidden lg:block text-center text-xs text-slate-400 py-4 mt-2">
+                    © {{ new Date().getFullYear() }} Dundalk Tires. All rights reserved.
+                </footer>
             </main>
         </div>
-    
+
         <!-- Bottom Navigation Bar (Mobile Only — hidden on report pages) -->
         <nav v-if="!hideBottomNav" class="lg:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-border z-40 flex justify-around items-center h-16 select-none shadow-[0_-4px_10px_rgba(0,0,0,0.02)] pb-[env(safe-area-inset-bottom)]">
             <Link prefetch href="/dashboard" class="flex flex-col items-center justify-center w-full h-full text-slate-400 active:scale-95 transition-transform" :class="{'text-brand-600 font-semibold': isActive('/dashboard')}">
