@@ -21,6 +21,14 @@
 /storage/*.key
 /storage/pail
 /vendor
+
+# dev artifacts
+.claude/
+graphify-out/
+*.cjs
+AGENTS.md
+CLAUDE.md
+*.zip
 _ide_helper.php
 Homestead.json
 Homestead.yaml
