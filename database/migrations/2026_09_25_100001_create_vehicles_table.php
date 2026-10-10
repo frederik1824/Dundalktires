@@ -27,7 +27,7 @@ return new class extends Migration
             $table->softDeletes();
 
             $table->index('plate');
-            $table->index(['make', 'model']);
+            // composite index removed: exceeds MariaDB 1000-byte limit on shared hosting
         });
     }
 

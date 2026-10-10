@@ -50,7 +50,7 @@ return new class extends Migration
 
             $table->index('type');
             $table->index('tire_brand');
-            $table->index(['tire_width', 'tire_ratio', 'tire_diameter']);
+            // composite tire index removed: 3 varchar cols exceed MariaDB 1000-byte limit
         });
     }
 
