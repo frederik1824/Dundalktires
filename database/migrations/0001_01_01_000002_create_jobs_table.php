@@ -43,7 +43,7 @@ return new class extends Migration
             $table->longText('exception');
             $table->timestamp('failed_at')->useCurrent();
 
-            $table->index(['connection', 'queue', 'failed_at']);
+            // composite index removed: exceeds MariaDB 1000-byte limit on shared hosting
         });
     }
 
